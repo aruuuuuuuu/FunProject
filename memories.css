@@ -100,6 +100,7 @@ body {
   }
   
   #end-buttons {
+    font-family: "Delicious Handrawn", cursive;
     position: fixed;
     bottom: 50px;                /* distance from bottom of screen */
     left: 50%;
@@ -124,7 +125,7 @@ body {
   #end-buttons button {
     background-color: #ffb6c1;
     color: white;
-    font-family: "Poppins", sans-serif;
+    font-family: "Delicious Handrawn", cursive;
     font-size: 1rem;
     padding: 12px 30px;
     border: none;

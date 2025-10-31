@@ -1,6 +1,6 @@
 /* Basic page style */
 body {
-    font-family: "Poppins", sans-serif;
+    font-family: "Delius", cursive;
     background-color: #ba7c9a;
     margin: 0;
     height: 100vh;
@@ -32,6 +32,7 @@ body {
   }
   
   button {
+    font-family: "Delicious Handrawn", cursive;
     border: none;
     padding: 10px 20px;
     font-size: 1rem;
@@ -69,7 +70,7 @@ body {
     10% { opacity: 1; }
     100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
   }
-  
+
   #backBtn {
     position: fixed;      /* stays relative to viewport */
     top: 20px;            /* distance from top */

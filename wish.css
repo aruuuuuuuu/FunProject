@@ -1,5 +1,5 @@
 body {
-    font-family: "Poppins", sans-serif;
+    font-family: "Delius", cursive;
     background-color: #ba7c9a;
     display: flex;
     justify-content: center;
@@ -53,6 +53,22 @@ body {
   .wish-input input:focus {
     border-color: #ff8fab;
     box-shadow: 0 0 8px rgba(255, 105, 180, 0.4);
+  }
+  
+  button {
+    font-family: "Delicious Handrawn", cursive;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #ff66b2;
+    color: white;
+  }
+  
+  button:hover {
+    transform: scale(1.1);
   }
   
   .wish-input button {
@@ -113,6 +129,7 @@ body {
 
       /* Back button */
       #backBtn {
+        font-family: "Delicious Handrawn", cursive;
         position: fixed;
         top: 20px;
         left: 20px;
