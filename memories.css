@@ -20,6 +20,7 @@ body {
     min-height: 500px;    /* minimum height to prevent jumpiness */
     margin: 50px auto;    /* center the container on the page */
     overflow: hidden;     /* hide overflowing elements during fade */
+    z-index: 10;
   }
   
   
