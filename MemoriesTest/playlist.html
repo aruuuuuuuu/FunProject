@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Songs that Remind Me of You 🎶</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Delius&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: "Delius", cursive;
+      background-color: #ba7c9a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background: rgb(84, 18, 56);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      max-width: 600px;
+      width: 90%;
+      text-align: center;
+    }
+
+    h1 {
+      color: #ff4fa3;
+      margin-bottom: 20px;
+    }
+
+    /* Back button */
+    #backBtn {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background-color: #ff4fa3;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 1rem;
+      box-shadow: 0 4px 10px rgba(255, 75, 163, 0.4);
+      transition: all 0.3s ease;
+      z-index: 100;
+    }
+
+    #backBtn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 15px rgba(255, 75, 163, 0.6);
+    }
+
+    .playlist {
+      max-height: 400px;
+      overflow-y: auto;
+      margin-top: 20px;
+      padding-right: 10px;
+    }
+
+    .song {
+      display: flex;
+      align-items: center;
+      background-color: #ffe6f2;
+      margin-bottom: 15px;
+      padding: 10px;
+      border-radius: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      opacity: 0;
+      transform: translateX(-50px);
+      transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 0.6s ease;
+    }
+
+    .song.show {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .song img {
+      width: 60px;
+      height: 60px;
+      border-radius: 10px;
+      margin-right: 15px;
+      object-fit: cover;
+    }
+
+    .song-title {
+      font-size: 1rem;
+      color: #ff4fa3;
+      font-weight: 600;
+    }
+
+    /* Optional scrollbar styling */
+    .playlist::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .playlist::-webkit-scrollbar-thumb {
+      background-color: #ff4fa3;
+      border-radius: 4px;
+    }
+
+    .playlist::-webkit-scrollbar-track {
+      background-color: #f1dbea;
+    }
+  </style>
+</head>
+<body>
+  <!-- Back Button -->
+  <button id="backBtn">← Back</button>
+  <div class="container">
+    <h1>Here's a little playlist that makes me think of you, my moss      ૮₍´˶• . • ⑅ ₎ა</h1>
+
+    <div class="playlist">
+      <div class="song"><img src="img/mattWorld.jpg" alt="Album 7"><div class="song-title">As The World Caves In by Matt Maltese</div></div>
+      <div class="song"><img src="img/casHeavenly.jpg" alt="Album 1"><div class="song-title">Heavenly by Cigarettes After Sex</div></div>
+      <div class="song"><img src="img/nbhdCompass.jpg" alt="Album 2"><div class="song-title">Compass by The Neighborhood</div></div>
+      <div class="song"><img src="img/arcticmonkWanabe.jpg" alt="Album 3"><div class="song-title">I Wanna Be Yours by Arctic Monkeys</div></div>
+      <div class="song"><img src="img/lanaradio.jpg" alt="Album 4"><div class="song-title">Radio by Lana Del Ray</div></div>
+      <div class="song"><img src="img/lianaMoon.jfif" alt="Album 5"><div class="song-title">Rises The Moon by Liana Flores</div></div>
+      <div class="song"><img src="img/gidOctober.jpg" alt="Album 6"><div class="song-title">We Fell In Love In October by Girl In Red</div></div>
+      <!-- Add more songs as needed -->
+    </div>
+  </div>
+
+  <script>
+    const songs = document.querySelectorAll('.song');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          // Add staggered delay
+          setTimeout(() => {
+            entry.target.classList.add('show');
+          }, index * 150); // 150ms delay between each song
+        }
+      });
+    }, { threshold: 0.2 });
+
+    songs.forEach(song => observer.observe(song));
+
+        // Back button click
+    const backBtn = document.getElementById('backBtn');
+    backBtn.addEventListener('click', () => {
+      window.location.href = "yes1.html";
+    });
+  </script>
+</body>
+</html>

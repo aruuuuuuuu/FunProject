@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Please Forgive Me 😭</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Make the GIF smaller and responsive */
+    .gif {
+      width: 300px;       /* adjust as needed */
+      max-width: 80%;     /* responsive on small screens */
+      height: auto;       /* keep aspect ratio */
+      display: block;
+      margin: 0 auto 20px auto; /* center with bottom spacing */
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #ffe6f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      text-align: center;
+      background-color: #f1dbea;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      max-width: 600px;
+      width: 90%;
+    }
+
+    h1 {
+      color: #ff4fa3;
+      margin-bottom: 20px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    #yesBtn {
+      background-color: #ff66b2;
+      transform: scale(1.3);
+      transition: transform 0.3s ease;
+      color: white;
+      font-size: 1rem;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+    }
+
+    #noBtn {
+      background-color: #666;
+      transform: scale(0.9);
+      transition: transform 0.3s ease;
+      color: white;
+      font-size: 1rem;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+    }
+
+    #yesBtn:hover {
+      transform: scale(1.4);
+    }
+
+    #noBtn:hover {
+      transform: scale(1.0);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExamZ2NmVla3N5cW00Y3EybWIzem1sZnVmZ2VhaWcyMWtsODc5NG9zdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/sw8rSWyo0wFz8WzLKN/giphy.gif" 
+         alt="Sad GIF" class="gif">
+
+    <h1>Do you forgive me for missing your birthday?</h1>
+
+    <div class="buttons">
+      <button id="yesBtn">Yes◝(ᵔᗜᵔ)◜</button>
+      <button id="noBtn">No (ง'̀-'́)ง</button>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const yesBtn = document.getElementById("yesBtn");
+      const noBtn = document.getElementById("noBtn");
+
+      // Redirect to yes page
+      yesBtn.addEventListener("click", () => {
+        window.location.href = "yes.html";
+      });
+
+      // Shrink/grow logic
+      let noScale = 0.9;
+      let yesScale = 1.3;
+
+      noBtn.addEventListener("click", () => {
+        noScale -= 0.1;
+        yesScale += 0.1;
+
+        noBtn.style.transform = `scale(${noScale})`;
+        yesBtn.style.transform = `scale(${yesScale})`;
+
+        noBtn.textContent = "Please? .·°՞(っ-ᯅ-ς)՞°·.";
+      });
+    });
+  </script>
+</body>
+</html>
